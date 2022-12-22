@@ -1,0 +1,13 @@
+<div class="mb-4">
+  <label *ngIf="label" class="block c-text-sub text-sm font-medium mb-1 transition-all">
+    {{label}}
+  </label>
+  <input
+    class="inp"
+    [type]="type"
+    [placeholder]="placeholder || ''"
+    [(ngModel)]="value"
+    (ngModelChange)="valueChange.emit(value)"
+  />
+  <p *ngIf="error" class="text-red-500 text-xs italic">{{error}}</p>
+</div>

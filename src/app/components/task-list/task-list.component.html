@@ -1,0 +1,16 @@
+<app-new-task *ngIf="showNewTask" (onTaskSaved)="onTaskSaved($event)" (onClosed)="onClosed()"></app-new-task>
+<div class="separator"></div>
+
+<ul class="list-none list-inside">
+  <li app-task
+    *ngFor="let task of tasks"
+    (onToggle)="onTaskToggled(task)"
+    (onDelete)="onTaskDeleted(task)"
+    [task]="task"
+    class="flex items-center border-b border-gray-300 last:border-none">
+  </li>
+
+  <li class="text-center w-full p-4 text-gray-500" *ngIf="tasks.length == 0">
+    Your task list is empty.
+  </li>
+</ul>

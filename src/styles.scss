@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply bg-gray-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl overflow-hidden shadow-lg p-3;
+  }
+
+  .separator {
+    @apply h-0.5 border border-b-gray-300 my-2 w-full bg-transparent;
+  }
+
+}

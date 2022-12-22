@@ -1,0 +1,16 @@
+<div class="flex flex-col">
+  <form noNgForm>
+    <app-input label="Task Description" type="text" name="description" [(value)]="description"></app-input>
+    <app-input label="Due Date" type="datetime-local" name="dueDate" [(value)]="dueDate"></app-input>
+  </form>
+  <div class="flex justify-end">
+    <app-button (onPress)="onClose()" type="flat">
+      <lucide-icon name="x" class="mr-1"></lucide-icon>
+      Cancel
+    </app-button>
+    <app-button (onPress)="onSave()">
+      <lucide-icon name="save" class="mr-1"></lucide-icon>
+      Save
+    </app-button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="flex flex-col p-2 flex-auto">
+  <h3 class="text-lg font-semibold">{{ task.description }}</h3>
+  <span class="text-sm text-gray-500">
+    Due <span class="font-semibold">{{ task.dueDate | date : 'EEE, MMM d, y, h:mm a' }}</span>
+  </span>
+</div>
+
+<div class="flex-auto"></div>
+
+<app-button type="flat" (onPress)="toggleTask()">
+  <lucide-icon name="{{ task.completed ? 'check-square' : 'square' }}"></lucide-icon>
+</app-button>
+
+<app-button type="flat" (onPress)="deleteTask()">
+  <lucide-icon name="trash"></lucide-icon>
+</app-button>
